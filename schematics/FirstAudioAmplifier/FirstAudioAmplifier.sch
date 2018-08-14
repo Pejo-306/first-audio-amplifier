@@ -625,31 +625,6 @@ F 3 "~" H 4500 2450 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4500 2600 4500 2700
-NoConn ~ 2650 5800
-$Comp
-L Connector:AudioJack3_Ground_Switch J3
-U 1 1 5B744ED0
-P 2450 5900
-F 0 "J3" H 2218 5779 50  0000 R CNN
-F 1 "AudioJack3_Ground_Switch" H 2218 5870 50  0000 R CNN
-F 2 "Connectors:Stereo_Jack_3.5mm_Switch_Ledino_KB3SPRS" H 2450 5900 50  0001 C CNN
-F 3 "~" H 2450 5900 50  0001 C CNN
-	1    2450 5900
-	1    0    0    1   
-$EndComp
-NoConn ~ 2650 5900
-NoConn ~ 2650 5600
-$Comp
-L power:GND #PWR02
-U 1 1 5B731791
-P 2750 6100
-F 0 "#PWR02" H 2750 5850 50  0001 C CNN
-F 1 "GND" H 2755 5927 50  0000 C CNN
-F 2 "" H 2750 6100 50  0001 C CNN
-F 3 "" H 2750 6100 50  0001 C CNN
-	1    2750 6100
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:GND #PWR09
 U 1 1 5B7317EB
@@ -806,10 +781,6 @@ Wire Wire Line
 Text Label 3350 5550 0    50   ~ 0
 AUDIO_OUT
 Wire Wire Line
-	2650 6000 2750 6000
-Wire Wire Line
-	2750 6000 2750 6100
-Wire Wire Line
 	3150 4350 3150 4450
 Wire Wire Line
 	3150 4350 3550 4350
@@ -839,11 +810,7 @@ F 3 "" H 3150 4950 50  0001 C CNN
 $EndComp
 Text Label 3150 4350 2    50   ~ 0
 AUDIO_IN
-Wire Wire Line
-	2650 5700 2750 5700
-Wire Wire Line
-	2750 5700 2750 5500
-Text Label 2750 5500 0    50   ~ 0
+Text Label 2800 6250 0    50   ~ 0
 AUDIO_IN
 $Comp
 L Connector_Generic:Conn_01x01 J2
@@ -976,4 +943,42 @@ Wire Wire Line
 	3900 4600 3700 4600
 Wire Wire Line
 	3900 4600 4300 4600
+$Comp
+L FC68131:FC68131 J3
+U 1 1 5B7302C9
+P 2500 6050
+F 0 "J3" H 2231 6664 50  0000 C CNN
+F 1 "FC68131" H 2231 6573 50  0000 C CNN
+F 2 "FC68131:FC68131-5P" H 2500 6050 50  0001 L BNN
+F 3 "Cliff" H 2500 6050 50  0001 L BNN
+F 4 "Stereo Jack, 3.5mm, 3pos, Pcb" H 2500 6050 50  0001 L BNN "Field4"
+F 5 "FC68131" H 2500 6050 50  0001 L BNN "Field5"
+F 6 "None" H 2500 6050 50  0001 L BNN "Field6"
+F 7 "Unavailable" H 2500 6050 50  0001 L BNN "Field7"
+F 8 "None" H 2500 6050 50  0001 L BNN "Field8"
+	1    2500 6050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 6050 2800 6050
+Wire Wire Line
+	2800 6050 2800 6250
+$Comp
+L power:GND #PWR02
+U 1 1 5B737B38
+P 2900 5750
+F 0 "#PWR02" H 2900 5500 50  0001 C CNN
+F 1 "GND" H 2905 5577 50  0000 C CNN
+F 2 "" H 2900 5750 50  0001 C CNN
+F 3 "" H 2900 5750 50  0001 C CNN
+	1    2900 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 5650 2900 5650
+Wire Wire Line
+	2900 5650 2900 5750
+NoConn ~ 2700 5750
+NoConn ~ 2700 5850
+NoConn ~ 2700 5950
 $EndSCHEMATC
