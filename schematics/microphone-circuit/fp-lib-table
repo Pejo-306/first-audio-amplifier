@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name FC68131)(type Legacy)(uri "/data/KiCad Custom Libraries/SnapEDA/FC68131/FC68131.mod")(options "")(descr ""))
+)
